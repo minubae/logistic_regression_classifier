@@ -108,13 +108,14 @@ def get_logistic_prob(opt_w, features_mat):
     return p_y
 
 def get_sort(data01, data02):
-    
+
     d1 = data01
     d2 = data02
     posterior = []
     y_test = []
 
-    for i in argsort(d1):
+    # for i in argsort(d1):
+    for i in argsort(d1)[::-1][:len(d1)]:
         posterior.append(d1[i])
         y_test.append(d2[i])
 
@@ -234,8 +235,8 @@ def main(features_mat, class_vec):
     plt.title('ROC curve')
     plt.xlabel('FPR')
     plt.ylabel('TPR')
-    # plt.plot(FPRc, TPRc, 'r', marker='.')
-    plt.plot(TPRc, FPRc, 'r', marker='.')
+    plt.plot(FPRc, TPRc, 'r', marker='.')
+    # plt.plot(TPRc, FPRc, 'r', marker='.')
     # plt.plot(FPRc, TPRc, 'r', marker='o')
     # plt.plot(FPRc, TPRc, 'r')
     # plt.plot(specificity, sensitivity, 'r')
