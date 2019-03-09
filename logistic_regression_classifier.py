@@ -1,7 +1,6 @@
 ###########################################################################################################################
-
 # Title: Logistic Regression Classifier
-# Date: 03/06/2019, Wednesday
+# Date: 03/08/2019, Friday
 # Author: Minwoo Bae (minwoo.bae@uconn.edu)
 # Institute: The Department of Computer Science and Engineering, UCONN
 ###########################################################################################################################
@@ -25,7 +24,7 @@ def get_log_likelihood(coeff_vec, features_mat, class_vec):
     log_likelihood = []
 
     for i in range(n):
-        
+
         log_like = log(1+exp((X[i].T).dot(w))) - y[i]*(X[i].T).dot(w)
         log_like_temp.append(log_like)
 
