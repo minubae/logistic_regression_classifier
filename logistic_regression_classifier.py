@@ -12,7 +12,7 @@ from numpy import array as vec
 from numpy import dot, exp, add, sum, random, abs, log, abs, log, ones, sort, argsort
 from sklearn.model_selection import train_test_split
 
-# Compute min logistic likelihood:
+# Compute a mininum logistic likelihood:
 def get_log_likelihood(coeff_vec, features_mat, class_vec):
 
     w = coeff_vec
@@ -32,7 +32,7 @@ def get_log_likelihood(coeff_vec, features_mat, class_vec):
 
     return log_likelihood
 
-# Compute a gradient descent algorithm:
+# Compute a gradient by using a gradient descent algorithm:
 def get_gradient(coeff_vec, features_mat, class_vec):
 
     w_0 = coeff_vec
@@ -90,7 +90,7 @@ def get_argmin_w(coeff_vec, features_mat, class_vec):
 
     return w_temp
 
-# Compute a probability by Logistic regression:
+# Compute a posterior probability by Logistic regression:
 def get_logistic_prob(opt_w, features_mat):
 
     p_y = []
@@ -107,6 +107,7 @@ def get_logistic_prob(opt_w, features_mat):
     p_y = vec(p_y)
     return p_y
 
+# Sort two arraries in descending order:
 def get_sort(data01, data02):
 
     d1 = data01
@@ -121,6 +122,7 @@ def get_sort(data01, data02):
 
     return posterior, y_test
 
+# Compute TPR, FPR, Precision, Sensitivity, Specificity to draw ROC curve:
 def get_ROC_curve(features_mat, class_vec):
     # '''
     X = features_mat
