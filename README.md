@@ -1,1 +1,1 @@
-# Logistic Regression Classifier
+# Logistic Regression Classifier and ROC curve generator

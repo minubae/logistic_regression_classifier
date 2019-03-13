@@ -1,5 +1,5 @@
 ###########################################################################################################################
-# Title: Logistic Regression Classifier
+# Title: Logistic Regression Classifier and a ROC curve generator
 # Date: 03/08/2019, Friday
 # Author: Minwoo Bae (minwoo.bae@uconn.edu)
 # Institute: The Department of Computer Science and Engineering, UCONN
@@ -234,7 +234,7 @@ def main(features_mat, class_vec):
     # print(TPRc)
     # print(FPRc)
     # '''
-    plt.title('ROC curve')
+    plt.title('ROC curve of the logistic regression (the breast cancer Wisconsin data)')
     plt.xlabel('FPR')
     plt.ylabel('TPR')
     plt.plot(FPRc, TPRc, 'r', marker='.')
